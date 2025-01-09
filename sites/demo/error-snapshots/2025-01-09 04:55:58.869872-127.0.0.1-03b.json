@@ -1,0 +1,331 @@
+{
+ "etype": "TypeError",
+ "evalue": "TypeError(\"msgprint() got an unexpected keyword argument 'hide_after_timeout'\")",
+ "exception": {
+  "args": [
+   40,
+   34,
+   109,
+   115,
+   103,
+   112,
+   114,
+   105,
+   110,
+   116,
+   40,
+   41,
+   32,
+   103,
+   111,
+   116,
+   32,
+   97,
+   110,
+   32,
+   117,
+   110,
+   101,
+   120,
+   112,
+   101,
+   99,
+   116,
+   101,
+   100,
+   32,
+   107,
+   101,
+   121,
+   119,
+   111,
+   114,
+   100,
+   32,
+   97,
+   114,
+   103,
+   117,
+   109,
+   101,
+   110,
+   116,
+   32,
+   39,
+   104,
+   105,
+   100,
+   101,
+   95,
+   97,
+   102,
+   116,
+   101,
+   114,
+   95,
+   116,
+   105,
+   109,
+   101,
+   111,
+   117,
+   116,
+   39,
+   34,
+   44,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   84,
+   121,
+   112,
+   101,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://library.test:8000/' [POST]>)",
+   "dump": {
+    "global init_request": "<function init_request>",
+    "request": "<Request 'http://library.test:8000/' [POST]>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "84": "\t\trollback = True",
+    "85": "",
+    "86": "\t\tinit_request(request)",
+    "87": "",
+    "88": "\t\tfrappe.api.validate_auth()"
+   },
+   "lnum": 86
+  },
+  {
+   "call": "(request=<Request 'http://library.test:8000/' [POST]>)",
+   "dump": {
+    "frappe. auth": "<module 'frappe.auth' from '/home/frappe/frappe-bench/apps/frappe/frappe/auth.py'>",
+    "frappe. local": "<werkzeug.local.Local object>",
+    "frappe.auth. HTTPRequest": "<class 'frappe.auth.HTTPRequest'>",
+    "frappe.local.http_request": "undefined",
+    "global frappe": "<module 'frappe' from '/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/app.py",
+   "func": "init_request",
+   "lines": {
+    "175": "",
+    "176": "\tif request.method != \"OPTIONS\":",
+    "177": "\t\tfrappe.local.http_request = frappe.auth.HTTPRequest()",
+    "178": "",
+    "179": "\tfor before_request_task in frappe.get_hooks(\"before_request\"):"
+   },
+   "lnum": 177
+  },
+  {
+   "call": "(self=<frappe.auth.HTTPRequest object>)",
+   "dump": {
+    "self": "<frappe.auth.HTTPRequest object>",
+    "self. set_session": "<bound method HTTPRequest.set_session of <frappe.auth.HTTPRequest object>>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "__init__",
+   "lines": {
+    "36": "",
+    "37": "\t\t# login and start/resume user session",
+    "38": "\t\tself.set_session()",
+    "39": "",
+    "40": "\t\t# set request language"
+   },
+   "lnum": 38
+  },
+  {
+   "call": "(self=<frappe.auth.HTTPRequest object>)",
+   "dump": {
+    "frappe. local": "<werkzeug.local.Local object>",
+    "frappe.local.login_manager": "undefined",
+    "global LoginManager": "<class 'frappe.auth.LoginManager'>",
+    "global frappe": "<module 'frappe' from '/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "set_session",
+   "lines": {
+    "70": "",
+    "71": "\tdef set_session(self):",
+    "72": "\t\tfrappe.local.login_manager = LoginManager()",
+    "73": "",
+    "74": "\tdef validate_csrf_token(self):"
+   },
+   "lnum": 72
+  },
+  {
+   "call": "(self=<frappe.auth.LoginManager object>)",
+   "dump": {
+    "self": "<frappe.auth.LoginManager object>",
+    "self. login": "<bound method LoginManager.login of <frappe.auth.LoginManager object>>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "__init__",
+   "lines": {
+    "107": "",
+    "108": "\t\tif frappe.local.form_dict.get(\"cmd\") == \"login\" or frappe.local.request.path == \"/api/method/login\":",
+    "109": "\t\t\tif self.login() is False:",
+    "110": "\t\t\t\treturn",
+    "111": "\t\t\tself.resume = False"
+   },
+   "lnum": 109
+  },
+  {
+   "call": "(self=<frappe.auth.LoginManager object>)",
+   "dump": {
+    "self": "<frappe.auth.LoginManager object>",
+    "self. post_login": "<bound method LoginManager.post_login of <frappe.auth.LoginManager object>>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "login",
+   "lines": {
+    "144": "\t\t\t\treturn False",
+    "145": "\t\tfrappe.form_dict.pop(\"pwd\", None)",
+    "146": "\t\tself.post_login()",
+    "147": "",
+    "148": "\tdef post_login(self):"
+   },
+   "lnum": 146
+  },
+  {
+   "call": "(self=<frappe.auth.LoginManager object>)",
+   "dump": {
+    "self": "<frappe.auth.LoginManager object>",
+    "self. run_trigger": "<bound method LoginManager.run_trigger of <frappe.auth.LoginManager object>>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "post_login",
+   "lines": {
+    "147": "",
+    "148": "\tdef post_login(self):",
+    "149": "\t\tself.run_trigger(\"on_login\")",
+    "150": "\t\tvalidate_ip_address(self.user)",
+    "151": "\t\tself.validate_hour()"
+   },
+   "lnum": 149
+  },
+  {
+   "call": "(self=<frappe.auth.LoginManager object>, event='on_login')",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. get_attr": "<function get_attr>",
+    "global frappe": "<module 'frappe' from '/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "login_manager": "undefined",
+    "method": "'erpnext.setup.doctype.employee.employee.on_login'",
+    "self": "<frappe.auth.LoginManager object>"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/auth.py",
+   "func": "run_trigger",
+   "lines": {
+    "301": "\tdef run_trigger(self, event=\"on_login\"):",
+    "302": "\t\tfor method in frappe.get_hooks().get(event, []):",
+    "303": "\t\t\tfrappe.call(frappe.get_attr(method), login_manager=self)",
+    "304": "",
+    "305": "\tdef validate_hour(self):"
+   },
+   "lnum": 303
+  },
+  {
+   "call": "(fn=<function on_login>, *args=(), **kwargs={'login_manager': <frappe.auth.LoginManager object>})",
+   "dump": {
+    "args": "()",
+    "fn": "<function on_login>",
+    "newargs": "{}"
+   },
+   "file": "/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1617": "\tnewargs = get_newargs(fn, kwargs)",
+    "1618": "",
+    "1619": "\treturn fn(*args, **newargs)",
+    "1620": "",
+    "1621": ""
+   },
+   "lnum": 1619
+  },
+  {
+   "call": "()",
+   "dump": {
+    "emp": "{'employee_name': 'Mo', 'designation': None}",
+    "emp. name": "None",
+    "frappe. msgprint": "<function msgprint>",
+    "global frappe": "<module 'frappe' from '/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py'>",
+    "hide_after_timeout": "undefined",
+    "indicator": "undefined",
+    "message": "'\ud83d\udccb Current Employees:\\n\\n\ud83d\udc64 Mo\\n'",
+    "msg": "undefined",
+    "primary_action": "undefined",
+    "title": "undefined"
+   },
+   "file": "/home/frappe/frappe-bench/apps/erpnext/erpnext/setup/doctype/employee/employee.py",
+   "func": "on_login",
+   "lines": {
+    "481": "\t\tmessage = \"No employees found in the database!\"",
+    "482": "",
+    "483": "\tfrappe.msgprint(",
+    "484": "\t\tmsg=message,",
+    "485": "\t\ttitle='Employee List',"
+   },
+   "lnum": 483
+  }
+ ],
+ "locals": {
+  "emp": "{'employee_name': 'Mo', 'designation': None}",
+  "employees": "[{'employee_name': 'Mo', 'designation': None}]",
+  "message": "\ud83d\udccb Current Employees:\n\n\ud83d\udc64 Mo\n"
+ },
+ "pyver": "Python 3.10.16: /home/frappe/frappe-bench/env/bin/python (prefix: /home/frappe/frappe-bench/env)",
+ "timestamp": "2025-01-09 04:55:58.870123",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/app.py\", line 86, in application\n    init_request(request)\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/app.py\", line 177, in init_request\n    frappe.local.http_request = frappe.auth.HTTPRequest()\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 38, in __init__\n    self.set_session()\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 72, in set_session\n    frappe.local.login_manager = LoginManager()\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 109, in __init__\n    if self.login() is False:\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 146, in login\n    self.post_login()\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 149, in post_login\n    self.run_trigger(\"on_login\")\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/auth.py\", line 303, in run_trigger\n    frappe.call(frappe.get_attr(method), login_manager=self)\n  File \"/home/frappe/frappe-bench/apps/frappe/frappe/__init__.py\", line 1619, in call\n    return fn(*args, **newargs)\n  File \"/home/frappe/frappe-bench/apps/erpnext/erpnext/setup/doctype/employee/employee.py\", line 483, in on_login\n    frappe.msgprint(\nTypeError: msgprint() got an unexpected keyword argument 'hide_after_timeout'\n"
+}

@@ -1,0 +1,12 @@
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _f398a5dcae907903 -p********** _f398a5dcae907903 -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./demo/private/backups/20250105_233009-demo-database.sql.gz
+
+Backup Summary for demo at 2025-01-05 23:30:17.175572
+Config  : ./demo/private/backups/20250105_233009-demo-site_config_backup.json 180.0B
+Database: ./demo/private/backups/20250105_233009-demo-database.sql.gz         932.9KiB
+Backup for Site demo has been successfully completed
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _f398a5dcae907903 -p********** _f398a5dcae907903 -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./demo/private/backups/20250106_053002-demo-database.sql.gz
+
+Backup Summary for demo at 2025-01-06 05:30:10.199354
+Config  : ./demo/private/backups/20250106_053002-demo-site_config_backup.json 180.0B
+Database: ./demo/private/backups/20250106_053002-demo-database.sql.gz         941.0KiB
+Backup for Site demo has been successfully completed
