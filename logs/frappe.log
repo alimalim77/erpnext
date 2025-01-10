@@ -592,3 +592,66 @@ Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
 2025-01-10 04:15:31,303 ERROR frappe New Exception collected with id: 2025-01-10 04:15:31.197011-127.0.0.1-b38
 Site: demo
 Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:52:05,663 ERROR frappe New Exception collected with id: 2025-01-10 04:52:05.533642-127.0.0.1-fc7
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:52:06,887 ERROR frappe New Exception collected with id: 2025-01-10 04:52:06.865435-127.0.0.1-561
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:52:08,397 ERROR frappe New Exception collected with id: 2025-01-10 04:52:08.392815-127.0.0.1-79a
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:53:29,289 ERROR frappe New Exception collected with id: 2025-01-10 04:53:29.070593-127.0.0.1-32f
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:53:30,885 ERROR frappe New Exception collected with id: 2025-01-10 04:53:30.810001-127.0.0.1-561
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 04:53:32,597 ERROR frappe New Exception collected with id: 2025-01-10 04:53:32.521493-127.0.0.1-0bb
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:06:52,239 ERROR frappe New Exception collected with id: 2025-01-10 05:06:52.108087-127.0.0.1-907
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:06:53,490 ERROR frappe New Exception collected with id: 2025-01-10 05:06:53.483136-127.0.0.1-ddd
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:06:54,607 ERROR frappe New Exception collected with id: 2025-01-10 05:06:54.598240-127.0.0.1-360
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:10:04,997 ERROR frappe New Exception collected with id: 2025-01-10 05:10:04.858943-127.0.0.1-900
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:10:06,175 ERROR frappe New Exception collected with id: 2025-01-10 05:10:06.170465-127.0.0.1-cb9
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:10:34,541 ERROR frappe New Exception collected with id: 2025-01-10 05:10:34.405097-127.0.0.1-329
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:10:35,758 ERROR frappe New Exception collected with id: 2025-01-10 05:10:35.747341-127.0.0.1-aae
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:04,844 ERROR frappe New Exception collected with id: 2025-01-10 05:11:04.704016-127.0.0.1-373
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:06,487 ERROR frappe New Exception collected with id: 2025-01-10 05:11:06.482196-127.0.0.1-c9e
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:07,214 ERROR frappe New Exception collected with id: 2025-01-10 05:11:07.204202-127.0.0.1-c4f
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:43,358 ERROR frappe New Exception collected with id: 2025-01-10 05:11:43.218786-127.0.0.1-57f
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:44,349 ERROR frappe New Exception collected with id: 2025-01-10 05:11:44.344146-127.0.0.1-7cb
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:11:44,995 ERROR frappe New Exception collected with id: 2025-01-10 05:11:44.982206-127.0.0.1-b79
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:36:01,390 ERROR frappe New Exception collected with id: 2025-01-10 05:36:01.198080-127.0.0.1-b95
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
+2025-01-10 05:36:03,051 ERROR frappe New Exception collected with id: 2025-01-10 05:36:03.040906-127.0.0.1-f9b
+Site: demo
+Form Dict: {'cmd': 'login', 'usr': 'Administrator', 'device': 'desktop'}
